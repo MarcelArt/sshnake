@@ -6,3 +6,10 @@ services:
       - "2222:2222"
     restart: unless-stopped
     pull_policy: always
+    networks:
+      - internet
+
+networks:
+  internet:
+    external: true
+    name: internet
