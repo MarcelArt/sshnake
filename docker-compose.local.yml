@@ -1,0 +1,9 @@
+services:
+  sshnake:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sshnake
+    ports:
+      - "2222:2222"
+    restart: no

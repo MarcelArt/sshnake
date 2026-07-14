@@ -1,9 +1,8 @@
 services:
   sshnake:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: marcelaritonang/sshnake:latest
     container_name: sshnake
     ports:
       - "2222:2222"
-    restart: no
+    restart: unless-stopped
+    pull_policy: always
